@@ -22,7 +22,7 @@ http://localhost:8001/getAllEvents?wsdl
 
 http://localhost:3000/getAllEvents/param
 
-###Para uso desde cliente SOAP Postman
+### Para uso desde cliente SOAP Postman
 hacer un request tipo post a http://localhost:8001/getUserById con body tipo raw XML en la forma:
 ```
 <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:examples:userService">
