@@ -39,7 +39,7 @@
    <service name = "UserService">
       <documentation>WSDL File for MyService</documentation>
       <port binding = "tns:getUserById_Binding" name = "UserPort">
-         <soap:address location = "http://localhost:8001/UserService" />
+         <soap:address location = "http://localhost:8001/getUserById" />
       </port>
    </service>
 </definitions>

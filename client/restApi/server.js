@@ -5,7 +5,7 @@ const {
   //Server rest
   var rest = require(`express`)();
   
-  rest.get('/getAllEvents/:parameter', function (req, res) { //el /:param decirle que lo que viene es un parametro
+  rest.get('/getUserById/:parameter', function (req, res) { //el /:param decirle que lo que viene es un parametro
     param = req.params.parameter // Asi se saca el paramentro 
     requestClient(res, param);
   });
