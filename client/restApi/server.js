@@ -1,17 +1,21 @@
 const {
-    requestClient
-  } = require("../services/getAllEvents");
+  requestProfileClient
+  } = require("../services/profileClient");
   
-  //Server rest
+  // Rest Api server
+
+
   var rest = require(`express`)();
   
-  rest.get('/getAllEvents/:parameter', function (req, res) { //el /:param decirle que lo que viene es un parametro
+
+  // Autopetición 
+  rest.get('/getUserById/:parameter', function (req, res) { //el /:param decirle que lo que viene es un parametro
     param = req.params.parameter // Asi se saca el paramentro 
-    requestClient(res, param);
+    requestProfileClient(res, param);
   });
   
   rest.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+    console.log('Api rest which expose the result of SOA client listen on port 3000 (development) 3001 (Production) ');
   });
   
   module.exports = {rest};

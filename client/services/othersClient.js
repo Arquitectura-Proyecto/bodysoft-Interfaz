@@ -1,7 +1,10 @@
 const soap = require('soap');
-const URI = require("../servers/msEvents");
+const URI = require("../servers/msOthers");
 
 //Cliente Soap
+/**
+ * CAMBIAR TODO
+ */
 function requestClient(res,param){
   
   var url = `${URI}getAllEvents?wsdl`;
