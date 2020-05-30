@@ -1,0 +1,45 @@
+<definitions name = "UserService"
+   targetNamespace = "http://www.examples.com/wsdl/MyService.wsdl"
+   xmlns = "http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns = "http://www.examples.com/wsdl/MyService.wsdl"
+   xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+
+   <message name = "request">
+      <part name = "id" type = "xsd:string"/>
+   </message>
+
+   <message name = "response">
+      <part name = "response_data" type = "xsd:string"/>
+   </message>
+   
+   <portType name = "UserPort">
+      <operation name = "getUserById">
+         <input message = "tns:request"/>
+         <output message = "tns:response"/>
+      </operation>
+   </portType>
+
+   <binding name = "getUserById_Binding" type = "tns:UserPort">
+      <soap:binding style = "rpc" transport = "http://schemas.xmlsoap.org/soap/http"/>
+
+      <operation name = "getUserById">
+         <soap:operation soapAction = "getUserById"/>
+
+         <input>
+            <soap:body encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/" namespace = "urn:examples:userService" use = "encoded"/>
+         </input>
+         <output>
+            <soap:body encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/" namespace = "urn:examples:userService" use = "encoded"/>
+         </output>
+      </operation>
+      
+   </binding>
+
+   <service name = "UserService">
+      <documentation>WSDL File for MyService</documentation>
+      <port binding = "tns:getUserById_Binding" name = "UserPort">
+         <soap:address location = "http://localhost:8001/UserService" />
+      </port>
+   </service>
+</definitions>
