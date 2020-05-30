@@ -10,4 +10,4 @@ services:
             END_POINT_SERVER_SOAP: 'http://172.17.0.1'
         ports: 
             - "8001:8001"
-            - "3001:3000"
+            - "3001:3001"

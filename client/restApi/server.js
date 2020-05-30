@@ -1,17 +1,17 @@
 const {
-    requestClient
-  } = require("../services/getAllEvents");
+  getUserByIdClient
+  } = require("../services/profileClient");
   
   //Server rest
   var rest = require(`express`)();
   
-  rest.get('/getUserById/:parameter', function (req, res) { //el /:param decirle que lo que viene es un parametro
+  rest.get('/getUserById/:parameter', function (req, res) { 
     param = req.params.parameter // Asi se saca el paramentro 
-    requestClient(res, param);
+    getUserByIdClient(res, param);
   });
   
-  rest.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+  rest.listen(3001, function () {
+    console.log('La api REST que consume el cliente SOAP esta escuchando 3001!');
   });
   
   module.exports = {rest};
