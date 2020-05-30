@@ -1,14 +1,14 @@
 const axios = require("axios");
-const URI = require("../servers/msEvents");
+import { uriProfileUser, uriProfileTrainer, uriProfileDegree, uriProfileSpeciaity, uriProfileTrainerSpeciality } from "../servers/msProfile"; 
 
 
 const completeURI = `${URI}events`;
 
 //Nuestras funciones iguales que en la capa de data dee la apigateway
 
-const getAllEvents = async (args) => {
+const getProfileByIdUser = async (idUser) => {
   try {
-    const { data } = await axios.get(completeURI);
+    const { data } = await axios.get(uriProfileUser + '/' + idUser);
     return data;
   } catch (error) {
     throw new Error(
@@ -22,5 +22,5 @@ const getAllEvents = async (args) => {
 
 // Exportamos las funciones
 module.exports = {
-  getAllEvents
+  getProfileByIdUser
 };
