@@ -13,7 +13,7 @@ const getProfileByIdUser = async (idUser) => {
     
     return data;
   } catch (error) {
-    console.log(error);
+    
     throw new Error(
       JSON.stringify({
         message: error.response.data,
