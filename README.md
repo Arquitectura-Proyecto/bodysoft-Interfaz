@@ -2,6 +2,7 @@
 
 ## Para Correr
  npm install
+ 
  npm run dev
 
 
@@ -18,5 +19,6 @@ http://localhost:8001/getAllEvents?wsdl
 
 ### Metodo get
 /param Puede ser cualquier cosa, solo es ilustrativo
+
 http://localhost:3000/getAllEvents/param
 
