@@ -1,0 +1,13 @@
+version: '3'
+services: 
+    bodysoft-interface:
+        container_name: bodysoft-interface
+        
+        build: .
+        environment: 
+            PROFILE_HOST: 'http://172.17.0.1:8000'
+            PORT_SERVER_SOAP: '8001'
+            END_POINT_SERVER_SOAP: 'http://172.17.0.1'
+        ports: 
+            - "8001:8001"
+            - "3001:3000"
