@@ -7,9 +7,9 @@ var express = require(`express`);
 var fileSystem = require('fs');
 
 
-var service = require('./services/profile/profileService');
+var service = require('./api_soap/profile/profileService');
 
-var xml_getProfileByIdUser = fileSystem.readFileSync('./server/services/profile/templates/getProfileByIdUser.wsdl', 'utf8');
+var xml_getProfileByIdUser = fileSystem.readFileSync('./server_SOAP/api_soap/profile/templates/getProfileByIdUser.wsdl', 'utf8');
 
 
 

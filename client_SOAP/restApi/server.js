@@ -1,6 +1,6 @@
 const {
   getUserByIdClient
-  } = require("../services/profileClient");
+  } = require("../client/profileClient");
   
   //Server rest
   var rest = require(`express`)();

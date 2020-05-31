@@ -1,5 +1,5 @@
 const axios = require("axios");
-const  uriProfileUser  = require( "../servers/msProfile"); 
+const  uriProfileUser  = require( "../server/msProfile"); 
 
 
 

@@ -1,5 +1,5 @@
 const soap = require('soap');
-const URI = require("../servers/msProfile");
+const URI = require("../server/msProfile");
 
 //Cliente Soap
 function getUserByIdClient(res,param){
