@@ -13,14 +13,14 @@ Cada vez que se cambie el xml ( .wsdl) se debe dejar de correr el proyecto y vol
 
 ## Para mirar xml en el navegador 
 
-http://localhost:8001/getAllEvents?wsdl
+http://localhost:8001/getUserById?wsdl
 
 ## Para probar en postman
 
 ### Metodo get
 /param Puede ser cualquier cosa, solo es ilustrativo
 
-http://localhost:3000/getAllEvents/param
+http://localhost:3001/getUserById/1
 
 ### Para uso desde cliente SOAP Postman
 hacer un request tipo post a http://localhost:8001/getUserById con body tipo raw XML en la forma:
