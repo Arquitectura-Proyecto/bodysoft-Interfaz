@@ -18,7 +18,7 @@ http://localhost:8001/getUserById?wsdl
 ## Para probar en postman
 
 ### Metodo get
-/param Puede ser cualquier cosa, solo es ilustrativo
+/1 Parametro de la consulta
 
 http://localhost:3001/getUserById/1
 
