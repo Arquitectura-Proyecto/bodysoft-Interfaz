@@ -5,7 +5,7 @@ services:
         
         build: .
         environment: 
-            PROFILE_HOST: 'http://172.17.0.1:8000'
+            PROFILE_HOST: 'http://34.239.253.185:8000'
             PORT_SERVER_SOAP: '8001'
             END_POINT_SERVER_SOAP: 'http://172.17.0.1'
         ports: 
