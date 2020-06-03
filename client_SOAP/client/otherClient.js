@@ -1,5 +1,5 @@
 const soap = require('soap');
-const URI = require("../servers/msOthers");
+const URI = require("../server/msOthers");
 
 //Cliente Soap
 function get2dSOAPData(res, param) {
