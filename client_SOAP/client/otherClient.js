@@ -5,6 +5,7 @@ const URI = require("../servers/msOthers");
 function get2dSOAPData(res, param) {
 
   var url = `${URI}wsusers/wsdl`;
+  console.log(url)
   var args = { userId: param };
   console.log(args);
 
