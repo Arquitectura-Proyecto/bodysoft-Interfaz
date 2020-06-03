@@ -1,5 +1,5 @@
-const { getUserByIdClient } = require("../services/profileClient");
-const { get2dSOAPData } = require("../services/otherClient");
+const { getUserByIdClient } = require("../client/profileClient");
+const { get2dSOAPData } = require("../client/otherClient");
 
 //Server rest
 var rest = require(`express`)();
